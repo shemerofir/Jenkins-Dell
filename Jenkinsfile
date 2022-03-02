@@ -1,8 +1,8 @@
 pipeline {
     agent any
     
-    parameters([
-        string(description: 'username', name: 'username', trim: true)])
+    [parameters([
+        string(description: 'username', name: 'username', trim: true)])]
         
     stages {
       
