@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    properties(
-    [parameters([
+    
+    parameters([
         string(description: 'username', name: 'username', trim: true)])
-        ])
+        
     stages {
       
         stage('python script') {
