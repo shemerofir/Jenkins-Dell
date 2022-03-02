@@ -1,10 +1,12 @@
 pipeline {
     agent any
+    
+    stages {
+        properties(
     [parameters([
         string(description: 'username', name: 'username', trim: true), 
         password(defaultValueAsSecret: <object of type hudson.util.Secret>, description: 'password', name: 'password')])
-        ]
-    stages {
+        ])
         stage('python script') {
             steps {
                 echo 'Building..'
